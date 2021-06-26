@@ -1,0 +1,37 @@
+{
+  "name": "dainty-di",
+  "version": "0.1.0",
+  "description": "A mini Node.js dependency injection library",
+  "keywords": [
+    "dependency injection",
+    "di",
+    "ioc",
+    "decorator",
+    "typescript"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "bash scripts/build.sh",
+    "test": "jest --detectOpenHandles --forceExit",
+    "test:cov": "jest --detectOpenHandles --forceExit --coverage"
+  },
+  "author": "bLue",
+  "license": "MIT",
+  "dependencies": {
+    "inversify": "^5.1.1",
+    "reflect-metadata": "^0.1.13"
+  },
+  "devDependencies": {
+    "@jest/globals": "^27.0.3",
+    "@types/node": "^12",
+    "esbuild": "^0.11.23",
+    "jest": "^27.0.4",
+    "ts-jest": "^27.0.3",
+    "ts-node": "^9.1.1",
+    "typescript": "^3.9.9"
+  }
+}
