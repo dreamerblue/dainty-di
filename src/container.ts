@@ -1,7 +1,7 @@
 import { Container } from 'inversify';
 import { PRIVATE_CONTAINER_KEYS } from './constants';
 
-export type { Container } from 'inversify';
+export { Container } from 'inversify';
 
 const _rootContainer = new Container({
   skipBaseClassChecks: true,
@@ -20,7 +20,7 @@ export class ContainerAccessor {
    * @returns {Container} The root container.
    */
   public static getRootContainer(): Container {
-    return this._rootcontainer;
+    return ContainerAccessor._rootcontainer;
   }
 
   /**
@@ -28,7 +28,7 @@ export class ContainerAccessor {
    * @returns {void}
    */
   public static resetRootContainer(): void {
-    this._rootcontainer.unbindAll();
-    this._rootcontainer.bind(PRIVATE_CONTAINER_KEYS.Container).toConstantValue(_rootContainer);
+    ContainerAccessor._rootcontainer.unbindAll();
+    ContainerAccessor._rootcontainer.bind(PRIVATE_CONTAINER_KEYS.Container).toConstantValue(_rootContainer);
   }
 }
