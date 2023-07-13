@@ -15,6 +15,8 @@
     "dist"
   ],
   "scripts": {
+    "docs:dev": "cd docs && npm run dev && cd -",
+    "docs:build": "cd docs && npm run build && cd -",
     "build": "bash scripts/build.sh",
     "test": "jest --detectOpenHandles --forceExit",
     "test:cov": "jest --detectOpenHandles --forceExit --coverage"
