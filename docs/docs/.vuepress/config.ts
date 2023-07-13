@@ -7,7 +7,8 @@ export default defineUserConfig({
   description: 'A mini Node.js dependency injection library',
   theme: defaultTheme({
     repo: 'dreamerblue/dainty-di',
-    docsDir: 'docs',
+    docsBranch: 'master',
+    docsDir: 'docs/docs',
     navbar: [
       {
         text: 'Docs',
