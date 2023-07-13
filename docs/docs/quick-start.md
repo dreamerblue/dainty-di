@@ -8,7 +8,7 @@ npm i -S dainty-di
 
 ## Setup
 
-Dainty DI is implemented based on traditional decorators (before TypeScript 5.0), you need to use it with TypeScript and make sure that the relevant configurations are set correctly in `tsconfig.json` below:
+Dainty DI is implemented based on legacy decorators (before TypeScript 5.0), you need to use it with TypeScript and make sure that the relevant configurations are set correctly in `tsconfig.json` below:
 
 ```json
 {
