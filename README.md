@@ -1,5 +1,11 @@
 # dainty-di
 
+![Branches](https://raw.githubusercontent.com/dreamerblue/dainty-di/badges/badges/coverage-branches.svg)
+![Functions](https://raw.githubusercontent.com/dreamerblue/dainty-di/badges/badges/coverage-functions.svg)
+![Lines](https://raw.githubusercontent.com/dreamerblue/dainty-di/badges/badges/coverage-lines.svg)
+![Statements](https://raw.githubusercontent.com/dreamerblue/dainty-di/badges/badges/coverage-statements.svg)
+![Jest coverage](https://raw.githubusercontent.com/dreamerblue/dainty-di/badges/badges/coverage-jest%20coverage.svg)
+
 Yet another light dependency injection lib for Node.js. It's based on TypeScript legacy decorators.
 
 You can use it to provide dependency injection capabilities for your application, or to build Web frameworks.
