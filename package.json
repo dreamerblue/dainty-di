@@ -19,7 +19,8 @@
     "docs:build": "cd docs && npm run build && cd -",
     "build": "bash scripts/build.sh",
     "test": "jest --detectOpenHandles --forceExit",
-    "test:cov": "jest --detectOpenHandles --forceExit --coverage"
+    "test:cov": "jest --detectOpenHandles --forceExit --coverage",
+    "test:ci": "jest --detectOpenHandles --forceExit --coverage --ci"
   },
   "author": "bLue",
   "license": "MIT",

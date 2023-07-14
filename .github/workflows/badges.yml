@@ -1,0 +1,46 @@
+name: badges
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+jobs:
+  generate-badges:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - uses: pnpm/action-setup@v2.2.4
+        with:
+          version: latest
+
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: 'pnpm'
+
+      - name: Installing dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Delete remote badges branch
+        run: git push origin --delete badges
+
+      - name: Create badges branch
+        run: git checkout -b badges
+
+      - name: Tests
+        run: pnpm run test:ci
+
+      - name: Generating coverage badges
+        uses: jpb06/jest-badges-action@latest
+        with:
+          branches: '*'
+          target-branch: badges
+
+      - name: Push badges branch
+        run: git push origin badges
