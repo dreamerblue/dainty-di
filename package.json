@@ -1,6 +1,6 @@
 {
   "name": "dainty-di",
-  "version": "0.1.2",
+  "version": "1.0.0",
   "description": "A mini Node.js dependency injection library",
   "keywords": [
     "dependency injection",
@@ -17,7 +17,7 @@
   "scripts": {
     "docs:dev": "cd docs && npm run dev && cd -",
     "docs:build": "cd docs && npm run build && cd -",
-    "build": "bash scripts/build.sh",
+    "build": "rimraf dist && tsc",
     "test": "jest --detectOpenHandles --forceExit",
     "test:cov": "jest --detectOpenHandles --forceExit --coverage",
     "test:ci": "jest --detectOpenHandles --forceExit --coverage --ci"
@@ -31,8 +31,8 @@
   "devDependencies": {
     "@jest/globals": "^27.0.3",
     "@types/node": "^12",
-    "esbuild": "^0.11.23",
     "jest": "^27.0.4",
+    "rimraf": "^5.0.1",
     "ts-jest": "^27.0.3",
     "ts-node": "^9.1.1",
     "typescript": "^3.9.9"
