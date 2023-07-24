@@ -2,7 +2,7 @@ import { defineUserConfig, defaultTheme } from 'vuepress';
 
 export default defineUserConfig({
   base: '/dainty-di/',
-  lang: 'zh-CN',
+  lang: 'en-US',
   title: 'Dainty DI',
   description: 'A mini Node.js dependency injection library',
   theme: defaultTheme({
